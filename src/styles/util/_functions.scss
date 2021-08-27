@@ -1,0 +1,18 @@
+@function half($num){
+    @return $num / 2
+};
+
+// //example
+// .div{
+//     width: $element-width;
+//     height: half($element-width);
+// }
+
+
+@function neg($num){
+    @return 0 - $num
+};
+@function halfNeg($num){
+    @return neg($num)
+}
+

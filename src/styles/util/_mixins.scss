@@ -1,0 +1,201 @@
+//short cut to center anything
+
+@mixin center-auto {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+//this is a simple way to define a box
+@mixin box($width,$heigt:$width) {
+    width: $width;
+    height: $heigt;
+}
+// div{
+//     @include box(200px)
+// }
+@mixin cover-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+// div{
+//     background-image: url('picture');
+//     @include cover-bg()
+// }
+//flex box tool kit
+@mixin  flex-column {
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flex-center-column {
+    @include flex-center();
+    flex-direction:column;
+}
+@mixin pseudo($width:100%,$height:100%,$display:block,$position:absolute,$content:'') {
+    content: $content;
+    display:$display;
+    position: $position;
+    @include box($width,$height)
+}
+// div{
+//     position: relative;
+//     width: 200px;
+//     height: 200px;
+//     &::after{
+//         @include pseudo();
+//         background-color: linear-gradient();
+//     }
+// }
+
+//positioning helpers
+@mixin position($position,$args) {
+    @each $pos in top right bottom left{
+        $i:index($args,$pos);
+        @if $i and $i+1 <= length($args) and type-of(nth($args,$i + 1)){
+            #{$position}:nth($args,$i + 1 )
+        }
+    }   
+    position: $position;
+}
+@mixin absolute($args:' ') {
+    @include position(absolute,$args);
+}
+@mixin fixed($args:' ') {
+    @include position(fixed,$args);
+}
+@mixin relative($args:' ') {
+    @include position(relative$args);
+}
+// .menu li {
+//     @include position(top 100% left 0)
+// }
+
+$phone-wide:480;
+$tablet:768;
+$large:1024;
+$desktop:1280;
+
+@mixin tablet{
+    @media only screen and(min-width:$tablet){
+        @content;
+    }
+}
+@mixin phone{
+    @media only screen and(min-width:$phone-wide){
+        @content;
+    }
+}
+@mixin large{
+    @media only screen and(min-width:$large){
+        @content;
+    }
+}
+@mixin desktop{
+    @media only screen and(min-width:$desktop){
+        @content;
+    }
+}
+
+@mixin fade($type) {
+    @if $type == 'hide'{
+    visibility: hidden;
+    opacity: 0;
+    transition: $transition;
+    // transition: visibility 1s opacity 1s;
+
+    }@else if $type == 'show'{
+    visibility: visible;
+    opacity: 1;
+    transition: $transition;
+    }
+}
+
+//mixin for input placeholder
+@mixin input-placeholder{
+    &.placeholder{
+        @content
+    }
+    &:-moz-placeholder{
+        @content
+    }
+    &::-moz-placeholder{
+        @content
+    }
+    &:-ms-input-placeholder{
+        @content
+
+    }
+    &::-webkit-input-placeholder{
+        @content
+    }
+};
+@mixin font-face($font-name,$file-name,$weight:normal,$style:normal){
+    @font-face{
+        font-family: quote($font-name);
+        src: url($file-name + '.eot');
+        src: url($file-name + '.eot?#iefix') format(embedded-opentype),
+        url($file-name + '.woff'
+        ) format('woff'),
+        url($file-name + '.ttf'
+        ) format('truetype'),
+        url($file-name + '.svg'
+        ) format('svg');
+        font-weight:$weight;
+        font-style:$style;
+    }
+}
+
+// form{
+//     @include font-face('myFont', './base/typography/myfont.ttf',$style:underline)
+// }
+@mixin text-short {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+};
+
+//creating css triangles
+@mixin triangle(
+    $color,$direction,$size:6px,$position:absolute,$round:false
+) {
+    @include pseudo($position:$position);
+    width:0;
+    height: 0;
+    @if $round{
+        border-radius: 3px;
+    }
+    @if $direction == 'down'{
+    border-left:$size transparent solid;
+    border-top:$size transparent $color;
+    border-right:$size transparent solid;
+    margin-top: 0 - round($size / 2.5);
+    }
+    @else if $direction == 'up'{
+    border-left:$size transparent solid;
+    border-bottom:$size transparent $color;
+    border-right:$size transparent solid;
+    margin-bottom: 0 - round($size / 2.5);
+    }
+    @else if $direction == 'right'{
+    border-top:$size transparent solid;
+    border-left:$size transparent $color;
+    border-bottom:$size transparent solid;
+    margin-right: -$size;
+    }
+    @else if $direction == 'left'{
+    border-top:$size transparent solid;
+    border-left:$size transparent $color;
+    border-bottom:$size transparent solid;
+    margin-left: -$size;
+    }
+}
+menu.li{
+    @include triangle(red,right ,6px) // >
+}

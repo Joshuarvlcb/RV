@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 import Rv from '../assets/homerv.jpeg';
 import logo from '../assets/rv-logo.png';
+
 const LandingPage = () => {
     return (
         <div className = 'landing'>

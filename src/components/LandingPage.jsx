@@ -11,21 +11,32 @@ const LandingPage = () => {
             <div className="gradient"></div>
             <img src={Rv} alt="" className="landing__image" />
             <div className="landing__box">
+                <div className="landing__titles">
                 <div className="landing__title">
-                    the largest and most trusted rv repair company
+                    the <span className = 'red'>largest & most trusted</span> rv repair company
                 </div>
                 <div className="landing__para">
                     234,456+ people have used repaird to repar there rv
                 </div>
+                </div>
+                
                 <div className="landing__display">
                     <div className="landing__display__location">
-                        Anywhere
+                        <div className="item">
+                        <div className="location">location</div>
+                            Anywhere
+                        </div>
                     </div>
                     <div className="landing__display__anytime">
-                        Anytime
+                        <div className="item">
+                        <div className="date">dates</div>
+                            Anytime
+                        </div>
                     </div>
                     <div className="landing__display__book">
-                        book
+                        <div className="item">
+                            book
+                        </div>
                     </div>
                 </div>
             </div>

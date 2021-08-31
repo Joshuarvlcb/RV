@@ -245,11 +245,13 @@ body {
 .container {
   width: 90vw;
   margin: 5rem 0;
-  max-width: 620px;
+  max-width: 1170px;
   background: #fff;
   border-radius: 0.25rem;
   padding: 1.5rem 2rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  margin-left: auto;
+  margin-right: auto;
 }
 .container h3 {
   font-weight: normal;
@@ -275,6 +277,13 @@ body {
   letter-spacing: 0.1rem;
   border-radius: 0.25rem;
   outline: none;
+}
+.container .underline {
+  width: 12rem;
+  height: 0.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  background: #9d3bce;
 }
 
 .landing {
@@ -312,4 +321,48 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: row;
+}
+
+.container {
+  height: auto;
+  overflow: hidden;
+}
+.container .logos {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.container .logos .logo {
+  width: 114px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container .logos .logo p {
+  margin-top: 10px;
+  text-align: center;
+}
+.container .logos img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 114px;
+  height: 114px;
+}
+.container h2 {
+  text-align: center;
+  height: auto;
+  overflow: hidden;
+}
+.container .underline {
+  width: 12rem;
+  height: 0.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  background: #9d3bce;
+}
+.container .undrline {
+  width: 114px;
+  height: 0.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  background: #9d3bce;
 }/*# sourceMappingURL=main.css.map */

@@ -231,7 +231,7 @@ main {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background: #f53d3d;
+  background: #f75f5f;
   color: #b30909;
   line-height: 1.5;
   font-size: 0.75rem;
@@ -283,7 +283,7 @@ body {
   height: 0.25rem;
   margin-left: auto;
   margin-right: auto;
-  background: #9d3bce;
+  background: #f31616;
 }
 
 .landing {
@@ -297,15 +297,10 @@ body {
   left: 0;
   height: 100vh;
   width: 100vw;
-<<<<<<< HEAD
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: bottom;
-     object-position: bottom;
-=======
-  object-fit: cover;
-  object-position: top;
->>>>>>> a51455f163bce2145a85d9cff87d2bde190d5645
+  -o-object-position: top;
+     object-position: top;
   z-index: -10;
 }
 .landing .gradient {
@@ -386,53 +381,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
-  flex-direction: row;
-}
-
-.container {
-  height: auto;
-  overflow: hidden;
-}
-.container .logos {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
-}
-.container .logos .logo {
-  width: 114px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.container .logos .logo p {
-  margin-top: 10px;
-  text-align: center;
-}
-.container .logos img {
-  margin-left: auto;
-  margin-right: auto;
-  width: 114px;
-  height: 114px;
-}
-.container h2 {
-  text-align: center;
-  height: auto;
-  overflow: hidden;
-}
-.container .underline {
-  width: 12rem;
-  height: 0.25rem;
-  margin-left: auto;
-  margin-right: auto;
-  background: #9d3bce;
-}
-.container .undrline {
-  width: 114px;
-  height: 0.25rem;
-  margin-left: auto;
-  margin-right: auto;
-  background: #9d3bce;
-=======
 }
 .landing__titles {
   z-index: 10000;
@@ -568,5 +516,51 @@ body {
 
 .none {
   opacity: 0;
->>>>>>> a51455f163bce2145a85d9cff87d2bde190d5645
+}
+
+.container {
+  height: auto;
+  overflow: hidden;
+}
+.container .logos {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.container .logos .logo {
+  width: 114px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container .logos .logo p {
+  margin-top: 30px;
+  text-align: center;
+}
+.container .logos img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 114px;
+  height: 114px;
+}
+.container h2 {
+  text-align: center;
+  height: auto;
+  overflow: hidden;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 45px;
+}
+.container .underline {
+  width: 30rem;
+  height: 0.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  background: #f31616;
+}
+.container .undrline {
+  width: 114px;
+  height: 0.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  background: #f31616;
+  margin-top: 5px;
 }/*# sourceMappingURL=main.css.map */

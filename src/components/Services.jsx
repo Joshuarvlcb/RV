@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import chat from '../assets/chat.png'
-import eye from '../assets/eye.png'
+import bar from '../assets/bar-chart.png'
+import eye from '../assets/eyes.png'
 import medal from '../assets/medal (1).png'
 import level from '../assets/level.png'
 import compass from '../assets/compass.png'
@@ -12,15 +12,15 @@ const Services = () => {
                 <div className="underline"></div>
                 <div className="logos">
                     <div className="logo">
-                        <img src={chat} />
+                        <img src={bar} />
                         <div className="undrline"></div>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi adipisci accusantium aliquam tenetur sint voluptatibus ipsum maiores voluptas doloremque. Quia quidem facilis eligendi autem cupiditate asperiores, modi possimus consectetur saepe?</p>
                     </div>
-                    <div className="logo">
-                        <img src={eye} />
+                    {/* <div className="logo">
+                        <img src={eye} className = "eye"/>
                         <div className="undrline"></div>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad dicta similique ullam voluptatibus rem, dignissimos libero ea, dolor mollitia odit tempore soluta. Explicabo a sint voluptatum inventore architecto corporis sequi!</p>
-                    </div>
+                    </div> */}
                     <div className="logo">
                         <img src={medal} />
                         <div className="undrline"></div>

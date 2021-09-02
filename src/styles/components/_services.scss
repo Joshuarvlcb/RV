@@ -44,3 +44,61 @@
     margin-top: 5px;
   }
 }
+
+
+@media only screen and (max-width: 800px) {
+  .container {
+    height: auto;
+    overflow: hidden;
+   
+    .logos {
+      @include flex-center-column;
+        margin-top: 50px;
+        .logo{
+          .ll{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 8px;
+          }
+          
+            
+          border: 1px solid black;
+          padding: 25px;
+          width: 100%;
+            @include center-auto;
+            margin-bottom: 40px;
+            border-radius: $radius;
+            box-shadow: 0 10px 12px 0px rgba(0,0,0,.2);
+            p{
+                margin-top: 30px;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+        }
+      img {
+          @include center-auto;
+        width: 114px;
+        height: 114px;
+      }
+    }
+    h2 {
+      text-align: center;
+      height: auto;
+      overflow: hidden;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 45px;
+    }
+    .underline {
+      @include box(30rem, 0.25rem);
+      @include center-auto;
+      background: $clr-primary-4;
+    }
+    .undrline {
+      @include box(114px, 0.25rem);
+      @include center-auto;
+      background: $clr-primary-4;
+      margin-top: 5px;
+    }
+  }
+}

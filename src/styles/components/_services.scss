@@ -1,0 +1,46 @@
+@use '../themes/defaultThemes' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.container {
+  height: auto;
+  overflow: hidden;
+ 
+  .logos {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+      .logo{
+          
+          width: 114px;
+          @include center-auto;
+          p{
+              margin-top: 30px;
+              text-align: center
+          }
+      }
+    img {
+        @include center-auto;
+      width: 114px;
+      height: 114px;
+    }
+  }
+  h2 {
+    text-align: center;
+    height: auto;
+    overflow: hidden;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 45px;
+  }
+  .underline {
+    @include box(30rem, 0.25rem);
+    @include center-auto;
+    background: $clr-primary-4;
+  }
+  .undrline {
+    @include box(114px, 0.25rem);
+    @include center-auto;
+    background: $clr-primary-4;
+    margin-top: 5px;
+  }
+}

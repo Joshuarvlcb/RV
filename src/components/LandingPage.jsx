@@ -1,19 +1,25 @@
-import React from 'react'
+import React from 'react';
 import Rv from '../assets/homerv.jpeg';
 import logo from '../assets/rv-logo.png';
+import {useState} from 'react';
+
 const LandingPage = () => {
+  const [nav, setNav] = useState(false)
     return (
         <div className = 'landing'>
-            <div className="logo-con">
-                <img src={logo} className = 'logo' alt="" />
-            </div>
+        
+        <div className="gradient"></div>;
+    
+      <div className="logo-con">
+           <img src={logo} className = 'logo' alt="" />
+      </div>
 
-            <ul class = 'nav-active none'>
-            <li class="nav__item">
-              <a href="" class="nav__link">
-                Porfolio
-              </a>
-            </li>
+      <div class="ham" onClick = {() => setNav(!nav)}>
+        <div class="ham-1">
+        </div>
+      </div>
+
+            <ul class = {`nav-active ${nav || 'none'}`}>
             <li class="nav__item">
               <a href="" class="nav__link">
                 Contact Me
@@ -21,19 +27,16 @@ const LandingPage = () => {
             </li>
             <li class="nav__item">
               <a href="" class="nav__link">
-                Testimonial
+                Why us
               </a>
             </li>
             <li class="nav__item">
               <a href="" class="nav__link">
-                Skills
+                Reviews
               </a>
             </li>
-            
           </ul>
-
-            <div className="gradient"></div>
-
+          
             <img src='https://images.pexels.com/photos/4263840/pexels-photo-4263840.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' alt="" className="landing__image" />
             <div className="landing__box">
                 <div className="landing__titles">

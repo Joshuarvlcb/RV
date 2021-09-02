@@ -442,7 +442,7 @@ body {
 }
 
 .nav-active {
-  background: #772d7e;
+  background: #f75f5f;
   opacity: 1;
   padding-left: 0px;
   top: 0;
@@ -452,9 +452,8 @@ body {
   justify-content: space-evenly;
   width: 100%;
   height: 100vh;
-  z-index: 10;
+  z-index: 100000;
   position: fixed;
-  left: -100%;
 }
 
 .nav-links {
@@ -467,8 +466,12 @@ body {
   border: none;
 }
 
-.nav-item {
+.nav__item {
   width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar-logo {
@@ -505,4 +508,62 @@ body {
 
 .none {
   opacity: 0;
+}
+
+.ham {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 80px;
+  height: 80px;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000000;
+}
+
+.ham-1 {
+  width: 40px;
+  height: 6px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.5s ease-in-out;
+}
+
+.ham-1::before,
+.ham-1::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 6px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.5s ease-in-out;
+}
+
+.ham-1::before {
+  transform: translateY(-16px);
+}
+
+.ham-1::after {
+  transform: translateY(16px);
+}
+
+.ham-1.open {
+  background-color: transparent !important;
+  transform: translateX(-50px);
+  box-shadow: none;
+}
+
+.ham-1.open::before {
+  background: white;
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.ham-1.open::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+  background: white;
 }/*# sourceMappingURL=main.css.map */

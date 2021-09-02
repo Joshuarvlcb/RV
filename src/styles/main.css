@@ -563,4 +563,67 @@ body {
   margin-right: auto;
   background: #f31616;
   margin-top: 5px;
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    height: auto;
+    overflow: hidden;
+  }
+  .container .logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .container .logos .logo {
+    border: 1px solid black;
+    padding: 25px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    border-radius: 0.25rem;
+    box-shadow: 0 10px 12px 0px rgba(0, 0, 0, 0.2);
+  }
+  .container .logos .logo .ll {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+  .container .logos .logo p {
+    margin-top: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .container .logos img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 114px;
+    height: 114px;
+  }
+  .container h2 {
+    text-align: center;
+    height: auto;
+    overflow: hidden;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 45px;
+  }
+  .container .underline {
+    width: 30rem;
+    height: 0.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    background: #f31616;
+  }
+  .container .undrline {
+    width: 114px;
+    height: 0.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    background: #f31616;
+    margin-top: 5px;
+  }
 }/*# sourceMappingURL=main.css.map */

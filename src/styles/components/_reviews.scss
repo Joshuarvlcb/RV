@@ -1,0 +1,116 @@
+@use '../util/mixins' as *;
+@use '../util/variables' as *;
+@use '../themes/defaultThemes' as *;
+
+.reviews-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Josefin Sans', sans-serif;
+  min-height: 100vh;
+  padding: 10px;
+  background: $white;
+
+  h1,
+  h3,
+  h4,
+  p {
+    text-align: center;
+    overflow: hidden;
+  }
+  h1 {
+    color: $clr-grey-4;
+    font-weight: bold;
+    text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+  }
+  // h4 {
+    
+  // }
+  p {
+    font-size: 15px;
+  }
+  .reviews-container {
+    @include flex-center;
+    
+  }
+  .box {
+    background: $clr-primary-6;
+    color: $white;
+    overflow: hidden;
+    display: inline-block;
+    width: 300px;
+    height: 265px;
+    min-width: 300px;
+    min-height: 265px;
+    padding: 1em;
+    border-radius: 15px;
+    margin: 75px;
+    text-align: center;
+    box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2);
+
+    .reviewsPerson {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: .5rem;
+      h3 {
+        font-weight: bold;
+        color: $white;
+      }
+
+      .reviewsDate {
+        color: $clr-grey-9;
+      }
+      img {
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+      }
+      .reviewsData {
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+        align-items: center;
+        h3,
+        h4 {
+          margin-bottom: 0.2rem !important;
+        }
+      }
+    }
+
+    .reviewsDesc {
+      padding: 10px;
+      margin-top: .5rem;
+      margin-bottom: .5rem;
+      h3 {
+        font-weight: bold;
+        color: $white;
+      }
+      .reviewsTitle {
+        margin: auto;
+      }
+      .reviewsPara {
+        color: $clr-grey-9;
+        margin: auto;
+        font-size: 16px;
+      }
+    }
+
+    .reviewsStars {
+      padding: 5px;
+
+      .star {
+        font-size: 1.5rem;
+
+      }
+    }
+  }
+}
+
+@media only screen and(max-width: 800px){
+  .reviews-container {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -41,7 +41,7 @@ h4 {
 
 p {
   margin-bottom: 1.25rem;
-  color: #6c859d;
+  color: #858585;
 }
 
 @media only screen and (min-width: 768) {
@@ -577,6 +577,109 @@ body {
   background: white;
 }
 
+.reviews-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Josefin Sans", sans-serif;
+  min-height: 100vh;
+  padding: 10px;
+  background: #fff;
+}
+.reviews-page h1,
+.reviews-page h3,
+.reviews-page h4,
+.reviews-page p {
+  text-align: center;
+  overflow: hidden;
+}
+.reviews-page h1 {
+  color: #858585;
+  font-weight: bold;
+  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+}
+.reviews-page p {
+  font-size: 15px;
+}
+.reviews-page .reviews-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reviews-page .box {
+  background: #f75f5f;
+  color: #fff;
+  overflow: hidden;
+  display: inline-block;
+  width: 300px;
+  height: 265px;
+  min-width: 300px;
+  min-height: 265px;
+  padding: 1em;
+  border-radius: 15px;
+  margin: 75px;
+  text-align: center;
+  box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2);
+}
+.reviews-page .box .reviewsPerson {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+}
+.reviews-page .box .reviewsPerson h3 {
+  font-weight: bold;
+  color: #fff;
+}
+.reviews-page .box .reviewsPerson .reviewsDate {
+  color: #e0e0e0;
+}
+.reviews-page .box .reviewsPerson img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+.reviews-page .box .reviewsPerson .reviewsData {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  align-items: center;
+}
+.reviews-page .box .reviewsPerson .reviewsData h3,
+.reviews-page .box .reviewsPerson .reviewsData h4 {
+  margin-bottom: 0.2rem !important;
+}
+.reviews-page .box .reviewsDesc {
+  padding: 10px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.reviews-page .box .reviewsDesc h3 {
+  font-weight: bold;
+  color: #fff;
+}
+.reviews-page .box .reviewsDesc .reviewsTitle {
+  margin: auto;
+}
+.reviews-page .box .reviewsDesc .reviewsPara {
+  color: #e0e0e0;
+  margin: auto;
+  font-size: 16px;
+}
+.reviews-page .box .reviewsStars {
+  padding: 5px;
+}
+.reviews-page .box .reviewsStars .star {
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .reviews-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .container {
   height: auto;
   overflow: hidden;

@@ -1,7 +1,8 @@
 import React from 'react';
-import Rv from '../assets/homerv.jpeg';
+import {useState} from 'react'
 import logo from '../assets/rv-logo.png';
-import {useState} from 'react';
+
+
 
 const LandingPage = () => {
   const [nav, setNav] = useState(false)
